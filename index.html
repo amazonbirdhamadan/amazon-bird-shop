@@ -4,18 +4,27 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#175b3a">
-<meta name="description" content="پرنده‌سرای آمازون همدان؛ فروش انواع طوطی، کاسکو، کاکادو، گرینچیک، طوطی برزیلی، عروس هلندی، شاه طوطی، راهب، لوری، فنچ، قفس، غذای پرنده و لوازم نگهداری در همدان.">
-<meta name="google-site-verification" content="cwzKfkj-yTtT6Zgytln4PoTpI_Y2LPb1Oq47N0gcHYI">
 
-<title>پرنده‌سرای آمازون همدان | فروش پرنده و لوازم نگهداری</title>
+<title>پرنده‌سرای آمازون همدان | فروش طوطی و لوازم پرندگان</title>
+
+<meta name="description" content="پرنده‌سرای آمازون همدان؛ معرفی انواع کاسکو، کاکادو، ماکائو، لوری، اکلکتوس، شاه طوطی، ملنگو، راهب، کانور، عروس هلندی، طوطی برزیلی، مرغ عشق، فنچ، قفس، غذای پرندگان و لوازم نگهداری در همدان.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://amazonbirdhamadan.github.io/amazon-bird-shop/">
+<meta property="og:title" content="پرنده‌سرای آمازون همدان">
+<meta property="og:description" content="آشنایی با انواع پرندگان زینتی و لوازم نگهداری در پرنده‌سرای آمازون همدان.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://amazonbirdhamadan.github.io/amazon-bird-shop/">
+<meta property="og:image" content="https://amazonbirdhamadan.github.io/amazon-bird-shop/amazon-parrot.jpg">
 
 <style>
 :root {
   --green: #175b3a;
+  --dark: #103d29;
   --light: #f2f7f0;
   --ink: #203027;
 }
 * { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 body {
   margin: 0;
   font-family: Tahoma, Arial, sans-serif;
@@ -24,28 +33,54 @@ body {
   line-height: 2;
 }
 header {
-  padding: 38px 18px;
+  padding: 30px 16px;
   text-align: center;
   color: white;
-  background: linear-gradient(135deg, #12452e, #278252);
+  background: linear-gradient(135deg, #103d29, #278252);
 }
-.bird { font-size: 54px; line-height: 1.3; }
-h1 { margin: 10px 0 4px; font-size: clamp(25px, 6vw, 36px); }
+.bird { font-size: 52px; line-height: 1.4; }
+h1 { margin: 8px 0; font-size: clamp(24px, 6vw, 35px); }
 header p { margin: 0; color: #eaf5ec; }
-main { width: min(720px, 100%); margin: auto; padding: 14px; }
-.intro, .info, .gallery {
+main { width: min(850px, 100%); margin: auto; padding: 12px; }
+section {
   background: white;
   margin: 14px 0;
-  padding: 20px 18px;
-  border-radius: 18px;
+  padding: 20px 17px;
+  border-radius: 17px;
   box-shadow: 0 5px 18px #143b2110;
 }
-h2 { color: var(--green); font-size: 20px; margin: 0 0 10px; }
+h2 { color: var(--green); font-size: 20px; margin: 0 0 12px; }
+h3 { color: var(--dark); font-size: 17px; margin: 16px 0 5px; }
+p { margin: 8px 0; }
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.photo {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 13px;
+  background: #edf5ee;
+}
+.photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+.photo figcaption {
+  padding: 8px 5px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+  color: var(--green);
+}
 .link {
   display: block;
-  padding: 12px 15px;
+  padding: 11px 14px;
   margin-top: 12px;
-  border-radius: 12px;
+  border-radius: 11px;
   text-align: center;
   background: var(--green);
   color: white;
@@ -57,112 +92,131 @@ h2 { color: var(--green); font-size: 20px; margin: 0 0 10px; }
   color: var(--green);
   border: 1px solid #d5e5d8;
 }
+.link:hover { opacity: .88; }
 .detail { overflow-wrap: anywhere; }
-.bird-list { padding-right: 22px; margin-bottom: 0; }
-.bird-list li { margin: 5px 0; }
-.gallery img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 15px;
-  margin: 15px auto;
+.catalog-list { padding-right: 23px; margin: 5px 0 12px; }
+.catalog-list li { margin: 5px 0; }
+.brand {
+  text-align: center;
+  font-size: 21px;
+  font-weight: bold;
+  color: var(--green);
+  direction: ltr;
 }
 footer {
   text-align: center;
-  padding: 18px 12px 28px;
+  padding: 20px 12px 30px;
   color: #5d7162;
   font-size: 13px;
 }
+@media (max-width: 360px) {
+  main { padding: 8px; }
+  section { padding: 15px 12px; }
+  .gallery-grid { gap: 8px; }
+}
 </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "PetStore",
+  "name": "پرنده‌سرای آمازون همدان",
+  "url": "https://amazonbirdhamadan.github.io/amazon-bird-shop/",
+  "telephone": "+989019329459",
+  "description": "معرفی پرندگان زینتی، طوطی‌ها، قفس، غذا و لوازم نگهداری پرندگان در همدان.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "همدان",
+    "addressRegion": "همدان",
+    "streetAddress": "قاسم‌آباد، خیابان امام، نبش کوچه ناروند",
+    "addressCountry": "IR"
+  },
+  "sameAs": [
+    "https://www.instagram.com/amazon_parot_hmd/"
+  ]
+}
+</script>
 </head>
 
 <body>
 <header>
   <div class="bird" aria-hidden="true">🦜</div>
   <h1>پرنده‌سرای آمازون همدان</h1>
-  <p>دنیای رنگارنگ پرنده‌ها؛ همراه شما در انتخاب و نگهداری پرندگان زینتی</p>
+  <p>دنیای رنگارنگ پرندگان زینتی و لوازم نگهداری</p>
 </header>
 
 <main>
 
+<!-- تصاویر در ابتدای سایت -->
+<section class="gallery" id="gallery">
+  <h2>📸 گالری پرندگان آمازون</h2>
+  <p>تصاویر طوطی‌های زیبا در گالری پرنده‌سرای آمازون همدان</p>
+
+  <div class="gallery-grid">
+    <figure class="photo">
+      <img src="amazon-parrot.jpg"
+           alt="طوطی آمازون در گالری پرنده‌سرای آمازون همدان"
+           width="800" height="600" fetchpriority="high">
+      <figcaption>طوطی آمازون</figcaption>
+    </figure>
+
+    <figure class="photo">
+      <img src="blue-fronted-amazon.jpg"
+           alt="طوطی آمازون پیشانی آبی"
+           width="800" height="600" loading="lazy">
+      <figcaption>آمازون پیشانی آبی</figcaption>
+    </figure>
+
+    <figure class="photo">
+      <img src="yellow-naped-amazon.jpg"
+           alt="طوطی آمازون پس‌گردن زرد"
+           width="800" height="600" loading="lazy">
+      <figcaption>آمازون پس‌گردن زرد</figcaption>
+    </figure>
+
+    <figure class="photo">
+      <img src="orange-winged-amazon.jpg"
+           alt="طوطی آمازون بال نارنجی"
+           width="800" height="600" loading="lazy">
+      <figcaption>آمازون بال نارنجی</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- موقعیت فروشگاه -->
 <section class="info" id="location">
-  <h2>📍 موقعیت مکانی پرنده‌سرای آمازون همدان</h2>
+  <h2>📍 آدرس پرنده‌سرای آمازون همدان</h2>
   <p class="detail">همدان، قاسم‌آباد، خیابان امام، نبش کوچه ناروند</p>
-  <a class="link" href="https://maps.app.goo.gl/M1Ht2us8vkn1EeEX9"
+  <a class="link"
+     href="https://maps.app.goo.gl/M1Ht2us8vkn1EeEX9"
      target="_blank" rel="noopener noreferrer">
-    مسیریابی و مشاهده موقعیت فروشگاه روی نقشه
+    مسیریابی و مشاهده فروشگاه روی نقشه
   </a>
 </section>
 
-<section class="intro">
-  <h2>به پرنده‌سرای آمازون همدان خوش آمدید 🦜</h2>
-  <p>
-    پرنده‌سرای آمازون همدان، همراه علاقه‌مندان پرندگان زینتی،
-    برای آشنایی با انواع پرنده‌ها، غذای مناسب، لوازم نگهداری
-    و وسایل مورد نیاز پرندگان.
-  </p>
-  <p>
-    برای مشاهده صفحه اینستاگرام، تماس با فروشگاه،
-    مسیریابی یا ورود به گروه روبیکا از راه‌های ارتباطی زیر استفاده کنید.
-  </p>
+<!-- گروه روبیکا -->
+<section class="info" id="rubika">
+  <h2>💬 گروه روبیکا پرنده‌سرای آمازون</h2>
+  <p>برای ورود به گروه و دنبال کردن مطالب مرتبط با پرندگان زینتی:</p>
+  <a class="link"
+     href="https://rubika.ir/joing/BBGBGBACF0ILEAAIPKPJDPKIGYINEGHK"
+     target="_blank" rel="noopener noreferrer">
+    ورود به گروه روبیکا
+  </a>
 </section>
 
-<section class="info">
-  <h2>🦜 انواع پرندگان زینتی</h2>
-  <p>با انواع پرندگان زینتی و شرایط نگهداری آن‌ها آشنا شوید:</p>
-  <ul class="bird-list">
-    <li>انواع کاسکو</li>
-    <li>کاکادو</li>
-    <li>گرینچیک</li>
-    <li>طوطی برزیلی</li>
-    <li>عروس هلندی</li>
-    <li>شاه طوطی</li>
-    <li>طوطی راهب</li>
-    <li>لوری</li>
-    <li>کیت کریمسون</li>
-    <li>انواع فنچ</li>
-    <li>نژادهای خاص پرندگان زینتی</li>
-  </ul>
-</section>
-
-<section class="info">
-  <h2>🛍️ لوازم و ملزومات پرندگان</h2>
-  <p>محصولات و لوازم مورد نیاز برای نگهداری پرندگان:</p>
-  <ul class="bird-list">
-    <li>وسایل بازی و سرگرمی پرندگان</li>
-    <li>سرلاک‌های مخصوص پرندگان</li>
-    <li>مولتی‌ویتامین‌های مخصوص پرندگان</li>
-    <li>انواع قفس و زیرقفس</li>
-    <li>انواع دانخوری</li>
-    <li>غذا و ملزومات نگهداری پرندگان</li>
-  </ul>
-  <p>برای اطلاع از موجودی و شرایط تهیه محصولات، با فروشگاه تماس بگیرید.</p>
-</section>
-
-<section class="gallery">
-  <h2>📸 گالری پرندگان پرنده‌سرای آمازون</h2>
-  <p>تصویری از دنیای رنگارنگ پرندگان زینتی:</p>
-
-  <img
-    src="parrots.jpg"
-    alt="انواع طوطی‌ها و پرندگان زینتی پرنده‌سرای آمازون همدان"
-    loading="lazy"
-  >
-
-  <p>پرنده‌سرای آمازون همدان؛ دنیای رنگارنگ پرنده‌ها 🦜</p>
-</section>
-
-<section class="info">
-  <h2>📞 تماس با پرنده‌سرای آمازون همدان</h2>
-  <p>برای پرسش درباره پرندگان و محصولات با ما تماس بگیرید:</p>
+<!-- شماره تماس -->
+<section class="info" id="contact">
+  <h2>📞 تماس با پرنده‌سرای آمازون</h2>
+  <p>برای پرسش درباره پرندگان، موجودی و لوازم نگهداری تماس بگیرید:</p>
   <a class="link secondary" href="tel:09019329459" dir="ltr">
     09019329459
   </a>
 </section>
 
-<section class="info">
-  <h2>📷 اینستاگرام پرنده‌سرای آمازون</h2>
-  <p>برای مشاهده صفحه اینستاگرام و دنبال کردن ما:</p>
+<!-- اینستاگرام -->
+<section class="info" id="instagram">
+  <h2>📷 اینستاگرام پرنده‌سرای آمازون همدان</h2>
   <p dir="ltr" style="text-align:center">
     <strong>@amazon_parot_hmd</strong>
   </p>
@@ -173,19 +227,119 @@ footer {
   </a>
 </section>
 
-<section class="info">
-  <h2>💬 گروه روبیکا</h2>
-  <p>برای ورود به گروه پرنده‌سرای آمازون همدان روی لینک زیر بزنید:</p>
-  <a class="link"
-     href="https://rubika.ir/joing/BBGBGBACF0ILEAAIPKPJDPKIGYINEGHK"
-     target="_blank" rel="noopener noreferrer">
-    ورود به گروه روبیکا
-  </a>
+<!-- معرفی فروشگاه -->
+<section class="info" id="about">
+  <h2>🦜 درباره پرنده‌سرای آمازون</h2>
+  <p>
+    پرنده‌سرای آمازون همدان، مرجعی برای آشنایی با انواع طوطی‌ها،
+    پرندگان زینتی، قفس، غذای پرندگان و لوازم نگهداری است.
+    برای اطلاع از موجودی و شرایط تهیه محصولات با فروشگاه تماس بگیرید.
+  </p>
+</section>
+
+<!-- فهرست پرندگان -->
+<section class="info" id="birds">
+  <h2>🦜 انواع پرندگان زینتی</h2>
+  <p class="brand">AMAZON_PAROT</p>
+
+  <h3>کاسکو</h3>
+  <ul class="catalog-list">
+    <li>دم قرمز</li>
+    <li>دم شرابی</li>
+  </ul>
+
+  <h3>کاکادو</h3>
+  <p>گالارز، امبرلا، ملوکان، دوکرپ</p>
+
+  <h3>ماکائو</h3>
+  <p>آبی طلایی، اسکارلت، هارلی کوئین</p>
+
+  <h3>لوری</h3>
+  <p>رنگین‌کمانی، سینه ببری، پالتو، بلک کاپ</p>
+
+  <h3>سایر طوطی‌ها</h3>
+  <ul class="catalog-list">
+    <li>اکلکتوس</li>
+    <li>شاه طوطی</li>
+    <li>ملنگو: زرد، آبی، سفید، سبز، پسته‌ای، کراس</li>
+    <li>راهب: زرد، آبی، سفید، سبز، پسته‌ای، کراس</li>
+    <li>خورشیدی: سان کانور، ژاندی کانور</li>
+    <li>کانور: گرینچیک، سانچیک، مونچیک، ردچیک، کریمسون، پیرلی، تراکوییس</li>
+  </ul>
+
+  <h3>عروس هلندی</h3>
+  <p>انواع نژاد عروس هلندی</p>
+
+  <h3>طوطی برزیلی</h3>
+  <p>انواع نژاد برزیلی فیشر و رزکولیس</p>
+
+  <h3>مرغ عشق و فنچ</h3>
+  <ul class="catalog-list">
+    <li>انواع نژاد مرغ عشق</li>
+    <li>انواع فنچ‌سانان</li>
+  </ul>
+</section>
+
+<!-- قفس و لوازم -->
+<section class="info" id="supplies">
+  <h2>🛍️ قفس و لوازم پرندگان</h2>
+
+  <h3>انواع قفس</h3>
+  <p>
+    قفس‌های 1033، 1032، چهارلیوان 1033، مسافرتی،
+    امپراطور، هشت‌خوان، چهارخوان، سهره‌ای در سایزهای 1، 2، 3 و 4،
+    تک‌خوان و جفت‌خوان.
+  </p>
+
+  <h3>تاب، نردبان و وسایل سرگرمی</h3>
+  <p>انواع تاب و نردبان پرنده.</p>
+
+  <h3>آبخوری و دون‌خوری</h3>
+  <p>انواع آبخوری و دون‌خوری مناسب مدل‌های مختلف قفس.</p>
+
+  <h3>بازی‌های فکری پرندگان</h3>
+  <p>
+    الاکلنگ، حلقه، توپ، آویز خوشه‌ای، آویز ریشه‌ای،
+    آویز پیچک و دیگر وسایل سرگرمی پرندگان.
+  </p>
+
+  <h3>کفی قفس</h3>
+  <p>انواع کفی قفس در طرح‌ها و رنگ‌های مختلف.</p>
+</section>
+
+<!-- غذا و مکمل -->
+<section class="info" id="food">
+  <h2>🌾 غذای پرندگان و محصولات نگهداری</h2>
+
+  <h3>انواع دانه پرندگان</h3>
+  <p>
+    انواع دانه پرندگان به صورت بسته‌بندی و فله‌ای،
+    با امکان تهیه کلی و جزئی؛ دانه‌های ایرانی درجه یک.
+  </p>
+
+  <h3>دانه‌های مخلوط</h3>
+  <p>انواع دانه مخلوط برای پرندگان مختلف، با تنوع بالا.</p>
+
+  <h3>تقویتی‌های پرندگان</h3>
+  <p>
+    انواع محصولات تقویتی پرندگان برای دوره‌های مختلف،
+    از جمله پاکسازی، تخم‌گذاری، جوجه‌داری و لک.
+    انتخاب محصول باید متناسب با گونه، سن و شرایط پرنده باشد.
+  </p>
+
+  <h3>سرلاک پرندگان</h3>
+  <p>انواع برندهای سرلاک ایرانی و خارجی.</p>
+
+  <p>
+    برای اطلاع از برندها، موجودی و شرایط تهیه محصولات،
+    با پرنده‌سرای آمازون همدان تماس بگیرید.
+  </p>
 </section>
 
 <footer>
-  پرنده‌سرای آمازون همدان 🦜
-  <p>معرفی پرندگان زینتی و لوازم نگهداری پرندگان در همدان</p>
+  <strong>پرنده‌سرای آمازون همدان 🦜</strong>
+  <p>پرندگان زینتی، طوطی‌ها، قفس، غذا و لوازم نگهداری پرندگان</p>
+  <p>همدان، قاسم‌آباد، خیابان امام، نبش کوچه ناروند</p>
 </footer>
 
 </main>
